@@ -18,7 +18,7 @@ for simplicity sake each school will have 30 incidents, 10 in each category.
 
 function Widget1() {
   return (
-    <div className="List1">
+    <div className="Widget1">
 
         <div style={{border: "20px solid red"}}>
             <h1>Widget 1</h1>
