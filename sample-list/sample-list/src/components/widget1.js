@@ -1,6 +1,10 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Chart1 from './chart1'
 
 /*
@@ -19,39 +23,46 @@ for simplicity sake each school will have 30 incidents, 10 in each category.
 
 function Widget1() {
   return (
-    <div className="Widget1">
+    
 
-        <div style={{border: "20px solid red"}}>
+        <Container className='w-100 mx-auto'>
 
-          <div id='header-w1'>
+          {/* This is the boring top header */}
+         
+          <div id='header-w1' className="w-100 p-2" style={{background: 'grey'}}>
             <h2>Incidents Per School</h2>
-
           </div>
+          
+          {/* This is where the list of schools will go as well as More Details button */}
+          
+            <div className="d-inline-block w-25">
+              <div id="school-list">
+                
+                <h3>Average per School</h3>
+                <h4>10.0</h4>
 
-          <div id="school-list">
-            
-            <h3>Average per School</h3>
-            <h4>10.0</h4>
+                  <ListGroup>
 
-              <ListGroup>
+                      <ListGroup.Item>School 1</ListGroup.Item>
+                      <ListGroup.Item>School 2</ListGroup.Item>
+                      <ListGroup.Item>School 3</ListGroup.Item>
+                      <ListGroup.Item>School 4</ListGroup.Item>
+                      <ListGroup.Item>School 5</ListGroup.Item>
 
-                  <ListGroup.Item>School 1</ListGroup.Item>
-                  <ListGroup.Item>School 2</ListGroup.Item>
-                  <ListGroup.Item>School 3</ListGroup.Item>
-                  <ListGroup.Item>School 4</ListGroup.Item>
-                  <ListGroup.Item>School 5</ListGroup.Item>
+                  </ListGroup>
 
-              </ListGroup>
-
-                  <Button>More Details</Button>
-          </div>
-
-          <div id='chart'>
-    <Chart1></Chart1>
-          </div>
-
-        </div>
-    </div>
+                      <Button>More Details</Button>
+              </div>
+            </div>
+          {/* The bar chart, see ./chart1.js */}
+            <div className="d-inline-block big-primary w-75">
+              <div id='chart'>
+                <Chart1></Chart1>
+              </div>
+            </div>
+          
+        </Container>
+   
   );
 }
 
