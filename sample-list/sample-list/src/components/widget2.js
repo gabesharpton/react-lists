@@ -22,7 +22,7 @@ function Widget2() {
             <h1>Widget 2</h1>
             
 
-                <Button>More Info</Button>
+            <Button variant="warning" href="www.google.com">Warning</Button>
 
         </div>
 
@@ -31,3 +31,4 @@ function Widget2() {
 }
 
 export default Widget2;
+

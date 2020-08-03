@@ -1,6 +1,7 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
+import Chart1 from './chart1'
 
 /*
 I need 3 different divs inside the widget,
@@ -21,21 +22,35 @@ function Widget1() {
     <div className="Widget1">
 
         <div style={{border: "20px solid red"}}>
-            <h1>Widget 1</h1>
-            <ListGroup horizontal>
 
-                <ListGroup.Item active>1</ListGroup.Item>
-                <ListGroup.Item info>2</ListGroup.Item>
-                <ListGroup.Item>3</ListGroup.Item>
-                <ListGroup.Item>4</ListGroup.Item>
-                <ListGroup.Item>5</ListGroup.Item>
+          <div id='header-w1'>
+            <h2>Incidents Per School</h2>
 
-            </ListGroup>
+          </div>
 
-                <Button>More Info</Button>
+          <div id="school-list">
+            
+            <h3>Average per School</h3>
+            <h4>10.0</h4>
+
+              <ListGroup>
+
+                  <ListGroup.Item>School 1</ListGroup.Item>
+                  <ListGroup.Item>School 2</ListGroup.Item>
+                  <ListGroup.Item>School 3</ListGroup.Item>
+                  <ListGroup.Item>School 4</ListGroup.Item>
+                  <ListGroup.Item>School 5</ListGroup.Item>
+
+              </ListGroup>
+
+                  <Button>More Details</Button>
+          </div>
+
+          <div id='chart'>
+    <Chart1></Chart1>
+          </div>
 
         </div>
-
     </div>
   );
 }
